@@ -34,4 +34,6 @@
     <dubbo:registry protocol="zookeeper" address="192.168.37.161:2181"></dubbo:registry>
     <dubbo:reference interface="com.jxduhai.manager.service.TestService" id="sdfsdfsdf"  timeout="100000"/>
     <dubbo:reference interface="com.jxduhai.manager.service.ItemCatService" id="itemCatService" timeout="1000000"/>
+    <dubbo:reference interface="com.jxduhai.manager.service.ItemService" id="itemService" timeout="1000000"/>
+    <dubbo:reference interface="com.jxduhai.manager.service.ItemDescService" id="itemDescService" timeout="1000000"/>
 </beans>

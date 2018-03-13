@@ -14,7 +14,7 @@ import java.util.List;
  *@date 2018/3/11
  */
 @Service
-public class ItemCatServiceImpl implements ItemCatService {
+public class ItemCatServiceImpl extends BaseServiceImpl<ItemCat> implements ItemCatService {
 
     @Autowired
     private ItemCatMapper itemCatMapper;
@@ -23,6 +23,14 @@ public class ItemCatServiceImpl implements ItemCatService {
     public List<ItemCat> findByPage(int page, int size) {
         PageHelper.startPage(page,size);
         List<ItemCat> list = itemCatMapper.select(null);
+        return list;
+    }
+
+    @Override
+    public List<ItemCat> queryItemCatByParentId(Long parentId) {
+        ItemCat itemCat = new ItemCat();
+        itemCat.setParentId(parentId);
+        List<ItemCat> list = itemCatMapper.select(itemCat);
         return list;
     }
 }
