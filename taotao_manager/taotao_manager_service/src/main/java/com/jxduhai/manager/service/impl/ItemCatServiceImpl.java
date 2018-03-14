@@ -26,11 +26,5 @@ public class ItemCatServiceImpl extends BaseServiceImpl<ItemCat> implements Item
         return list;
     }
 
-    @Override
-    public List<ItemCat> queryItemCatByParentId(Long parentId) {
-        ItemCat itemCat = new ItemCat();
-        itemCat.setParentId(parentId);
-        List<ItemCat> list = itemCatMapper.select(itemCat);
-        return list;
-    }
+
 }

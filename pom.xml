@@ -46,9 +46,18 @@
         <freemarker.version>2.3.23</freemarker.version>
         <quartz.version>2.2.2</quartz.version>
         <lombok.version>1.16.20</lombok.version>
+        <fastdfs-client-java.version>1.27.0.0</fastdfs-client-java.version>
     </properties>
 
     <dependencies>
+
+        <!-- https://mvnrepository.com/artifact/net.oschina.zcx7878/fastdfs-client-java -->
+        <dependency>
+            <groupId>net.oschina.zcx7878</groupId>
+            <artifactId>fastdfs-client-java</artifactId>
+            <version>${fastdfs-client-java.version}</version>
+        </dependency>
+
 
         <!-- https://mvnrepository.com/artifact/org.projectlombok/lombok -->
         <dependency>

@@ -11,5 +11,5 @@ import java.util.List;
 public interface ItemCatService extends BaseService<ItemCat>{
     List<ItemCat> findByPage(int page, int size);
 
-    List<ItemCat> queryItemCatByParentId(Long parentId);
+
 }

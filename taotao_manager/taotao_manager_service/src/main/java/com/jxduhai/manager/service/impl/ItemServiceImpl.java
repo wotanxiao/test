@@ -1,11 +1,16 @@
 package com.jxduhai.manager.service.impl;
 
+import com.github.pagehelper.PageHelper;
+import com.github.pagehelper.PageInfo;
+import com.jxduhai.common.TaoReslt;
 import com.jxduhai.manager.pojo.Item;
 import com.jxduhai.manager.pojo.ItemDesc;
 import com.jxduhai.manager.service.ItemDescService;
 import com.jxduhai.manager.service.ItemService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
+
+import java.util.List;
 
 /****
  *@author yxw
@@ -29,5 +34,18 @@ public class ItemServiceImpl extends BaseServiceImpl<Item> implements ItemServic
         itemDesc.setItemDesc(desc);
 
         itemDescService.save(itemDesc);
+    }
+
+    @Override
+    public TaoReslt<Item> queryItemByPage(Integer page, Integer rows) {
+
+        TaoReslt<Item> taoReslt = new TaoReslt<>();
+        PageHelper.startPage(page,rows);
+        List<Item> items = super.queryByPage(page, rows);
+        PageInfo<Item> info = new PageInfo<>(items);
+
+        taoReslt.setRows(items);
+        taoReslt.setTotal(info.getTotal());
+        return taoReslt;
     }
 }

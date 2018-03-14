@@ -47,7 +47,9 @@ public class ItemCatController {
     @ResponseBody
     public List<ItemCat> queryItemCatByParentId(@RequestParam(value = "id",defaultValue = "0")Long parentId){
 
-        List<ItemCat> list = itemCatService.queryItemCatByParentId(parentId);
+        ItemCat itemCat = new ItemCat();
+        itemCat.setParentId(parentId);
+        List<ItemCat> list = itemCatService.queryListByWhere(itemCat);
         return list;
     }
 }

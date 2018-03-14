@@ -67,9 +67,9 @@
 <script type="text/javascript">
 	//编辑器参数
 	kingEditorParams = {
-		filePostName  : "uploadFile",  //上传的文件名 
-		uploadJson : '/rest/pic/upload', //上传的路径
-		dir : "image"   //上传的文件类型
+		filePostName  : "uploadFile",  //上传的文件名
+        uploadJson : '/rest/pic/upload', //上传的路径
+        dir : "image"   //上传的文件类型
 	};
 	
 	var itemAddEditor ;
