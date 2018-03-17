@@ -10,7 +10,7 @@ import java.util.List;
  *@date 2018/3/14
  */
 @Data
-public class TaoReslt<T> implements Serializable{
+public class TaoResult<T> implements Serializable{
 
     private Long total;
 

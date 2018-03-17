@@ -2,7 +2,7 @@ package com.jxduhai.manager.service.impl;
 
 import com.github.pagehelper.PageHelper;
 import com.github.pagehelper.PageInfo;
-import com.jxduhai.common.TaoReslt;
+import com.jxduhai.common.TaoResult;
 import com.jxduhai.manager.pojo.Item;
 import com.jxduhai.manager.pojo.ItemDesc;
 import com.jxduhai.manager.service.ItemDescService;
@@ -37,15 +37,15 @@ public class ItemServiceImpl extends BaseServiceImpl<Item> implements ItemServic
     }
 
     @Override
-    public TaoReslt<Item> queryItemByPage(Integer page, Integer rows) {
+    public TaoResult<Item> queryItemByPage(Integer page, Integer rows) {
 
-        TaoReslt<Item> taoReslt = new TaoReslt<>();
+        TaoResult<Item> taoResult = new TaoResult<>();
         PageHelper.startPage(page,rows);
         List<Item> items = super.queryByPage(page, rows);
         PageInfo<Item> info = new PageInfo<>(items);
 
-        taoReslt.setRows(items);
-        taoReslt.setTotal(info.getTotal());
-        return taoReslt;
+        taoResult.setRows(items);
+        taoResult.setTotal(info.getTotal());
+        return taoResult;
     }
 }

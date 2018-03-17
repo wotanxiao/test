@@ -1,6 +1,6 @@
 package com.jxduhai.manager.controller;
 
-import com.jxduhai.common.TaoReslt;
+import com.jxduhai.common.TaoResult;
 import com.jxduhai.manager.pojo.Item;
 import com.jxduhai.manager.service.ItemService;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -47,12 +47,12 @@ public class ItemController {
      */
     @RequestMapping(method = RequestMethod.GET)
     @ResponseBody
-    public TaoReslt<Item> findItemByPage(@RequestParam(defaultValue = "1") Integer page, Integer rows){
+    public TaoResult<Item> findItemByPage(@RequestParam(defaultValue = "1") Integer page, Integer rows){
 
 
-        TaoReslt<Item> taoReslt = itemService.queryItemByPage(page,rows);
+        TaoResult<Item> taoResult = itemService.queryItemByPage(page,rows);
 
 
-        return taoReslt;
+        return taoResult;
     }
 }

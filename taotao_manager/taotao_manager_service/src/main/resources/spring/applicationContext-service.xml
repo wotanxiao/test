@@ -24,9 +24,10 @@
     <dubbo:registry protocol="zookeeper" address="192.168.37.161:2181"></dubbo:registry>
 
     <!-- 声明需要暴露的服务接口 -->
-     <dubbo:service interface="com.jxduhai.manager.service.TestService"
-     ref="testServiceImpl" />
+    <dubbo:service interface="com.jxduhai.manager.service.TestService" ref="testServiceImpl" />
     <dubbo:service interface="com.jxduhai.manager.service.ItemCatService" ref="itemCatServiceImpl"></dubbo:service>
     <dubbo:service interface="com.jxduhai.manager.service.ItemService" ref="itemServiceImpl"></dubbo:service>
     <dubbo:service interface="com.jxduhai.manager.service.ItemDescService" ref="itemDescServiceImpl"></dubbo:service>
+    <dubbo:service interface="com.jxduhai.manager.service.ContentService" ref="contentServiceImpl"></dubbo:service>
+    <dubbo:service interface="com.jxduhai.manager.service.ContentCategoryService" ref="contentCategoryServiceImpl"></dubbo:service>
 </beans>

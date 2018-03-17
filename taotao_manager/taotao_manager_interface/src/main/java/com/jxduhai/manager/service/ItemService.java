@@ -1,6 +1,6 @@
 package com.jxduhai.manager.service;
 
-import com.jxduhai.common.TaoReslt;
+import com.jxduhai.common.TaoResult;
 import com.jxduhai.manager.pojo.Item;
 
 /****
@@ -16,5 +16,5 @@ public interface ItemService extends BaseService<Item>{
      */
     void saveItem(Item item, String desc);
 
-    TaoReslt<Item> queryItemByPage(Integer page, Integer rows);
+    TaoResult<Item> queryItemByPage(Integer page, Integer rows);
 }

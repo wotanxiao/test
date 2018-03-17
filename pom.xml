@@ -11,6 +11,7 @@
         <module>taotao_manager</module>
         <module>taotao_manager_web</module>
         <module>../jxduhai_mybatis</module>
+        <module>taotao_portal</module>
     </modules>
 
     <!-- 集中定义依赖版本号 -->

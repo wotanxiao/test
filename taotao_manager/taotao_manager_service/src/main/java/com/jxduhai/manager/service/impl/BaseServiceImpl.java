@@ -25,6 +25,8 @@ public class BaseServiceImpl<T extends BasePojo> implements BaseService<T> {
     private Class<T> clazz;
 
     public BaseServiceImpl(){
+
+
         // 获取父类的type
         Type genericSuperclass = this.getClass().getGenericSuperclass();
         // 强转为ParameterizedType，可以使用获取泛型类型的方法

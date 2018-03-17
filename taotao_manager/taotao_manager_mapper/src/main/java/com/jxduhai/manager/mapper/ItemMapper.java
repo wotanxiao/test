@@ -7,5 +7,5 @@ import com.jxduhai.manager.pojo.Item;
  *@author yxw
  *@date 2018/3/13
  */
-public interface IntmMapper extends Mapper<Item> {
+public interface ItemMapper extends Mapper<Item> {
 }

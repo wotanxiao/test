@@ -88,9 +88,10 @@ public class PicUploadController {
         * */
 
         try {
-            String path = Thread.currentThread().getContextClassLoader().getResource("").getPath();
-//            String confurl = System.getProperty("user.dir") + "\\src\\main\\resources\\tracker.conf";
-            ClientGlobal.init(path+"\\tracker.conf");
+//            String path = Thread.currentThread().getContextClassLoader().getResource("").getPath();
+            String confurl = System.getProperty("user.dir") + "\\src\\main\\resources\\tracker.conf";
+//            ClientGlobal.init(path+"tracker.conf");
+            ClientGlobal.init(confurl);
             TrackerClient trackerClient = new TrackerClient();
             TrackerServer trackerServer = trackerClient.getConnection();
             StorageServer storageServer = null;
@@ -100,6 +101,7 @@ public class PicUploadController {
             String url = IMAGE_SERVER_URL + "/" + arr[0] + "/" + arr[1];
             result.setError(0);
             result.setUrl(url);
+            System.out.println(url);
 
         } catch (Exception e) {
             logger.error("上传图片发生了异常",e);
