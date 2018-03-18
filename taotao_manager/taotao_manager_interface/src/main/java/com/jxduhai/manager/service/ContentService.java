@@ -9,4 +9,6 @@ import com.jxduhai.manager.pojo.Content;
  */
 public interface ContentService extends BaseService<Content> {
     TaoResult<Content> queryPageByContentCategoryId(Integer page, Integer rows, Long categoryId);
+
+    String queryContentByCategoryId(Long taotao_ad_id);
 }

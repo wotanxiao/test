@@ -24,5 +24,13 @@
             </plugin>
         </plugins>
     </build>
+    <!--添加服务的接口依赖-->
+    <dependencies>
+        <dependency>
+            <groupId>com.jxduhai</groupId>
+            <artifactId>taotao_manager_interface</artifactId>
+            <version>1.0-SNAPSHOT</version>
+        </dependency>
+    </dependencies>
 
 </project>

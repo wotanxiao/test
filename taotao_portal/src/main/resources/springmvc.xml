@@ -11,6 +11,9 @@
     <!-- controller扫描 -->
     <context:component-scan base-package="com.jxduhai.portal.controller" />
 
+    <!--扫描配置文件-->
+    <context:property-placeholder location="classpath:*.properties"></context:property-placeholder>
+
     <!-- 注解驱动 -->
     <mvc:annotation-driven />
 
@@ -31,7 +34,7 @@
     <dubbo:registry protocol="zookeeper" address="192.168.37.161:2181" />
 
     <!-- 声明要调用的服务，timeout是设置连接超时最长时间,如果不设置，超时时间默认是3秒 -->
-    <!-- <dubbo:reference interface="com.taotao.manager.service.ItemCatService" -->
-    <!-- id="itemCatService" timeout="1000000" url="dubbo://127.0.0.1:20880/"
-        /> -->
+<!--     <dubbo:reference interface="com.taotao.manager.service.ItemCatService"
+     id="itemCatService" timeout="1000000" url="dubbo://127.0.0.1:20880/"/> -->
+    <dubbo:reference interface="com.jxduhai.manager.service.ContentService" id="contentService" timeout="1000000"/>
 </beans>
