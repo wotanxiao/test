@@ -62,7 +62,7 @@ public class ContentServiceImpl extends BaseServiceImpl<Content> implements Cont
     public String queryContentByCategoryId(Long categoryId) {
 
 //        RedisUtils redisUtils = new RedisUtilsPoolImpl();
-
+//        redisUtils.del(TAOTAO_PORTAL_AD_KEY);
         String s = redisUtils.get(TAOTAO_PORTAL_AD_KEY);
 
         if (StringUtils.isNotBlank(s)){
