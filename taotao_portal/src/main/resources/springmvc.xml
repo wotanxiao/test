@@ -37,4 +37,5 @@
 <!--     <dubbo:reference interface="com.taotao.manager.service.ItemCatService"
      id="itemCatService" timeout="1000000" url="dubbo://127.0.0.1:20880/"/> -->
     <dubbo:reference interface="com.jxduhai.manager.service.ContentService" id="contentService" timeout="1000000"/>
+    <dubbo:reference interface="com.jxduhai.sso.service.UserService" id="userServiceImpl" timeout="1000000"/>
 </beans>

@@ -10,7 +10,7 @@
         <module>taotao_common</module>
         <module>taotao_manager</module>
         <module>taotao_manager_web</module>
-        <module>../jxduhai_mybatis</module>
+        <!--<module>../jxduhai_mybatis</module>-->
         <module>taotao_portal</module>
         <module>taotao_sso</module>
         <module>taotao_sso_web</module>

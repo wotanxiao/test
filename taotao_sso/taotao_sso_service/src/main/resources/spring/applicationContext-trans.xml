@@ -13,7 +13,7 @@
         <property name="dataSource" ref="dataSource" />
 
     </bean>
-<import resource="applicationContext-dao.xml"></import>
+
     <!-- 定义事务策略 -->
     <tx:advice id="txAdvice" transaction-manager="transactionManager">
         <tx:attributes>
